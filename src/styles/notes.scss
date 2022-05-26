@@ -1,0 +1,139 @@
+@import './custom_colors.scss';
+
+#notes-body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: width .5s ease-in-out;
+}
+
+.notes-content {
+    width: 100%;
+    transition-delay: .25s;
+    transition: .5s ease-in-out;
+}
+
+.notes-content.active {
+    margin-left: 280px;
+    transition: .5s ease-in-out;
+}
+
+
+
+div.nav-menu {
+    transition: .5s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    left: -17.5rem;
+    visibility: collapse;
+    width: 0;
+
+    .button-note {
+        transition: .5s ease-in-out;
+        display: block;
+        height: 110px;
+        width: 0;
+
+    }
+
+}
+
+div.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    transition: width .5s ease-in-out;
+    position: absolute;
+    visibility: visible;
+    width: 280px;
+    height: 100%;
+    box-shadow: 0 0 5px #666;
+    padding-top: 10px;
+    color: $custom-purple;
+    background-color: $custom-gray;
+    left: 0;
+    margin-top: 70px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .info-add-section {
+        margin-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    h1 {
+        width: 280px;
+        margin-top: 5px;
+
+    }
+
+    a {
+
+
+        h1 {
+            margin-left: 0;
+        }
+
+        div {
+            margin-left: 1px;
+            margin-bottom: 1px;
+        }
+
+        .button-note {
+            cursor: auto;
+            display: flex;
+            flex-direction: column;
+            transition: .5s;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 0px;
+            width: 280px;
+            height: 110px;
+
+
+            .card-base {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                width: 280px;
+            }
+
+            .trash {
+                cursor: pointer;
+                padding-right: 15px;
+            }
+
+            &:focus {
+                background-color: $custom-purple;
+
+                h1 {
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+.notes-editor {
+    padding: 0;
+    height: calc(100% - 43px);
+
+    .quill {
+        height: 100%;
+    }
+}
+
+//Temporary solution until quill is not updated
+//it's showing 2 toolbars
+.quill > .ql-toolbar:first-child {
+    display: none !important;
+  } 
+
+::-webkit-scrollbar {
+    width: 5px;
+}

@@ -1,0 +1,53 @@
+@import "./custom_colors";
+
+
+
+nav.navbar {
+    height: 70px;
+    border-bottom: 1px solid black;
+    flex-shrink: 1;
+
+    .navbar-brand {
+        img {
+            height: 40px;
+            margin-top: 15px;
+
+        }
+    }
+}
+
+
+.link {
+    color: $custom-purple;
+
+    &:hover {
+        border-color: $custom-purple-darker;
+        color: $custom-purple-darker;
+    }
+}
+
+.navbar-logged {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $custom-purple;
+
+    .button {
+        background-color: $custom-purple;
+    }
+
+    .navbar-menu {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: none;
+        padding: 0;
+        background-color: $custom-purple;
+    }
+
+}
+
+.editor-content{
+    color: $custom-purple-darker;
+    background-color: $custom-gray;
+
+}

@@ -1,0 +1,56 @@
+@import "./custom_colors";
+
+.auth{
+ background-color: $custom-purple;
+ height: calc(100% - 70px);
+}
+
+.link {
+    color: $custom-purple;
+
+    &:hover{
+        border-color: $custom-purple-darker;
+        color: $custom-purple-darker;
+    }
+}
+.adjust { 
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: space-between;
+    white-space: nowrap; 
+    text-align: center;  
+    border: solid transparent 1px;
+    border-width: 1px;
+    height: 2.5em;
+    color: $custom-purple;
+
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
+
+    line-height: 1.5;
+
+    &:hover{
+        color: $custom-purple-darker;
+    }
+
+    
+}
+
+.min-size{
+    min-width: 270px;
+}
+
+
+p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
+}
+
