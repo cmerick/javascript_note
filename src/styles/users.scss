@@ -1,0 +1,23 @@
+@import "./custom_colors";
+
+.users {
+    padding-top: 40px !important;
+
+    
+    .card-content {
+        flex: 1;
+        box-sizing: border-box;
+        padding-top: 40px !important;
+        
+    }
+
+    .users-edit {
+        .title {
+            margin-bottom: 15px;
+        }
+
+        button { 
+            color: $custom-purple;
+        }
+    }
+}

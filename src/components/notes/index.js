@@ -4,6 +4,7 @@ import "../../styles/notes.scss";
 import List from "../notes/list";
 import NoteService from '../../services/notes';
 import Editor from "../notes/editor";
+import Search from "../notes/search";
 import { Column } from 'rbx';
 
 const Notes = (props) => {
@@ -51,12 +52,17 @@ const Notes = (props) => {
         setCurrentNote(updatedNote.data);
     }
 
+    const searchNotes = async (query) => {
+        const response = await NoteService.search(query);
+        setNotes(response.data);
+    }
+
     return (
         <>
             <div id='notes-body'>
                 <div className={props.openMenu ? 'nav-menu active' : 'nav-menu'}>
                     <div>
-                        search...
+                        <Search searchNotes={searchNotes} fetchNotes={fetchNotes}/>
                     </div>
                     <List
                         openMenu={props.openMenu}
