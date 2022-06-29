@@ -22,7 +22,7 @@ function Search(props) {
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={handleKeyDown} />
             </Column>
-            <Column mobile={2} size={1}>
+            <Column size={1}>
                 <a href="#" onClick={() => {
                     props.fetchNotes()
                     setQuery('')

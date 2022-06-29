@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import HeaderLogged from "../../components/header_logged";
+import HeaderLogged from "../../components/header_logged_notes";
 import Notes from "../../components/notes";
 
 const NotesScreen = () => {
